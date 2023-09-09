@@ -1,0 +1,123 @@
+/********CABECERA*********/
+
+.contenedor-header {
+    width: 99.1%;
+    height: 114px;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px; 
+    display: flex;
+}
+
+
+
+.titulo {
+    font-size: 24px; 
+    margin-right: 10px; 
+}
+
+
+.logo {
+    max-width: 100px;
+    height: auto; 
+}
+
+
+/***********CUERPO PRINCIPAL**********/
+
+.bloque-general {
+    background-color: #f7b385; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.login {
+    background-color: #fff; 
+    padding: 80px; 
+    border-radius: 5px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.login input[type="submit"] {
+    background-color: #007BFF; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin: 0 auto; 
+}
+
+.Bienvenida {
+    width: 65%;
+    color: black;
+}
+
+/***********CUERPO LOGIN**********/
+.mensaje {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+.bloque-gimnasio {
+    width: 1665.9px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7b385; 
+}
+
+
+
+
+.boton1, .boton2 {
+    display: inline-block;
+    width: 120px;
+    padding: 10px;
+    margin: 50px;
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/********PIE DE PAGINA******/
+
+.pie {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    height: 60px; 
+}
+
+.contactanos {
+    text-align: center; 
+    padding: 20px; 
+    background-color: #333; 
+  }
+  
+  .contactanos p {
+    margin: 10px 0; 
+    color: white; 
+  }
