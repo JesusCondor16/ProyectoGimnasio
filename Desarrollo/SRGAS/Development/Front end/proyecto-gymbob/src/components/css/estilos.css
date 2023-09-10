@@ -1,0 +1,203 @@
+/********CABECERA*********/
+
+.contenedor-header {
+    width: 99.1%;
+    height: 114px;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px; 
+    display: flex;
+}
+
+.titulo {
+    font-size: 24px; 
+    margin-right: 10px; 
+}
+
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+.gimnasio{
+    width: 500px;
+    display: flex;
+    margin-top: 10px; /* Mover hacia abajo */
+    margin-left: 40px; /* Mover hacia la izquierda */
+    margin-bottom: 50px; /* Mover hacia abajo */
+}
+
+/***********CUERPO PRINCIPAL**********/
+
+.bloque-general {
+    background-color: #f7b385; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.login {
+    background-color: #fff; 
+    padding: 40px; 
+    border-radius: 20px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.login input[type="submit"] {
+    background-color: #007BFF; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin: 0 auto; 
+}
+
+.Bienvenida {
+    width: 65%;
+    color: black;
+}
+
+/***********CUERPO LOGIN**********/
+.mensaje {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+.bloque-gimnasio {
+    width: 100.5%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7b385; 
+}
+
+
+
+
+.boton1, .boton2 {
+    display: inline-block;
+    width: 120px;
+    padding: 10px;
+    margin: 50px;
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/***********CUERPO REGISTRO**********/
+.titulo-centrado {
+    text-transform: uppercase;
+    text-decoration:solid;
+    margin-top: 20px;
+    text-align: center;
+    
+}
+.body1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #cb232c, #ce1d61);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    text-align: center;
+    padding: 20px 25px;
+    box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7);
+}
+
+form .title {
+    color: #252525;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+form label {
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+form label .fa-solid {
+    font-size: 20px;
+    color: #cb232c;
+    margin-right: 10px;
+}
+form label .fa-envelope {
+    font-size: 20px;
+    color: #cb232c;
+    margin-right: 10px;
+}
+form label .fa-user {
+    font-size: 20px;
+    color: #cb232c;
+    margin-right: 10px;
+}
+form label input {
+    outline: none;
+    border: none;
+    color: #252525;
+    border-bottom: solid 1px #ce1d61;
+    padding: 0 5px;
+    font-size: 18px;
+}
+
+form label input::nombre {
+    color: rgba(37, 37, 37, 0.5);
+}
+
+form .link {
+    color: #252525;
+    margin-bottom: 15px;
+}
+
+form button {
+    color: #fff;
+    border: none;
+    background: linear-gradient(to right, #cb232c, #ce1d61);
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+/********PIE DE PAGINA******/
+
+.pie {
+    width: 99.1%;
+    height: 50px;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #a30f0f; 
+    color: #fff; 
+    padding: 10px; 
+    display: flex;
+}
+
+.contactanos {
+    text-align: center; 
+    padding: 5px; 
+    background-color: #0c0c0caf; 
+  }
+  
+  .numero {
+    text-align: center;
+    padding: 5px; 
+    background-color: #0c0c0caf; 
+    margin: 10px ; 
+    color: white; 
+  }
