@@ -84,18 +84,27 @@
 
 
 
-.boton1, .boton2 {
-    display: inline-block;
-    width: 120px;
-    padding: 10px;
-    margin: 50px;
-    text-align: center;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.btn{
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ff0000d8; /* Cambiamos el color a rojo */
+    text-shadow: none;
+    background: transparent;
+    box-shadow: transparent;
+    border: 1px solid #e6d8d880; /* Cambiamos el color del borde a rojo */
+    transition: 0.5s ease;
+    user-select: none;
+}
+
+.btn:hover, button:focus {
+    color: #ffffff;
+    background: #ff0000; /* Cambiamos el fondo a rojo */
+    border: 1px solid #ff0000; /* Cambiamos el color del borde a rojo */
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #ff0000, 0 0 20px #ff0000, 0 0 50px #ff0000, 0 0 100px #ff0000;
 }
 /***********CUERPO REGISTRO**********/
 .titulo-centrado {
