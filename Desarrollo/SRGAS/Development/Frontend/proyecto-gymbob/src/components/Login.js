@@ -33,7 +33,7 @@ return (
         <input type="checkbox" id="mantener_sesion" name="mantener_sesion" {...register('mantener_sesion')} />
         Mantener la sesión abierta
         </label>
-        <button type="submit" value="RLogin">Iniciar Sesion</button>
+        <button type="submit" value="RLogin">Iniciar Sesion </button>
     </form>
     </div>
 );
