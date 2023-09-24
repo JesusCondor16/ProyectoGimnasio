@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 const Formulario = () => {
 const { register, handleSubmit } = useForm();
@@ -22,7 +23,7 @@ return (
     <form onSubmit={handleSubmit(onSubmit)}>
         <label>
         <i className="fa-solid fa-user"></i> Nombre:
-        <input type="text" id="nombre" name="nombre" {...register('nombre', { required: true })}  />
+        <input type="text" id="nombre" name="nombre" {...register('nombre', { required: true })} />
         </label>
         <label>
         <i className="fas fa-envelope"></i> Correo Electrónico:
@@ -30,11 +31,11 @@ return (
         </label>
         <label>
         <i className="far fa-user"></i> Usuario:
-        <input type="text" id="usuario_reg" name="usuario_reg" {...register('usuario_reg', { required: true })} autoComplete='off' />
+        <input type="text" id="usuario_reg" name="usuario_reg" {...register('usuario_reg', { required: true })} />
         </label>
         <label>
         <i className="fa-solid fa-lock"></i> Contraseña:
-        <input type="password" id="contrasena_reg" name="contrasena_reg" {...register('contrasena', { required: true })}autoComplete="new-password" />
+        <input type="password" id="contrasena_reg" name="contrasena_reg" {...register('contrasena', { required: true })} />
         </label>
         <label>
         <input type="checkbox" id="mantener_sesion" name="mantener_sesion" {...register('mantener_sesion')} />

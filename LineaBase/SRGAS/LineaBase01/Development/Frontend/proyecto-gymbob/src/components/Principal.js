@@ -18,10 +18,8 @@ class Principal extends Component {
                     <div className="mensaje">
                         <h2>¡Bienvenido a GYMBOB, tu gimnasio de confianza!</h2>
                     </div>
-                    <Link to="/registro" className="btn">Registro</Link>
-                    <Link to="/login" className="btn">Login</Link>
-                    <Link to="/comprar" className="btn">Comprar</Link>
-                    <Link to="/maquinasdisponibles" className="btn">Ver maquinas</Link>
+                    <Link to="/registro" className="boton1">Registro</Link>
+                    <Link to="/login" className="boton2">Login</Link>
                 </div>
                 <img src={require('./img/gimnasio.jpg')} alt="gimnasio" className="gimnasio"></img>
              </div>
