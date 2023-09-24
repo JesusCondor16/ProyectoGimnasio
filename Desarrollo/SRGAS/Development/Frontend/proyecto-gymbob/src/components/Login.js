@@ -1,38 +1,42 @@
-import React, {Component} from 'react';
-import {Link} from "react-router-dom";
-import { Helmet } from 'react-helmet';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 import './css/estilos.css'; 
-import './img/gimnasio.jpg';
-import './img/logo.png'; 
 
-class Login extends Component {
-    render() {
-        return (
-         <div>
-            <Helmet>
-               <title>GymBob</title>
-            </Helmet>
+const Formulario = () => {
+const { register, handleSubmit } = useForm();
 
-            <main>
-                <div className="bloque-general">
-                <div className="login">
-                 <h2>Iniciar Sesión</h2>
-                  <form action="procesar_login.php" method="post">
-                   <label htmlFor="usuario">Usuario:</label>
-                   <input type="text" id="usuario" name="usuario" required />
-                   <label htmlFor="contrasena">Contraseña:</label>
-                   <input type="password" id="contrasena" name="contrasena" required />
+const onSubmit = (data) => {
+    // Realiza acciones con los datos enviados, como enviarlos a un servidor o procesarlos localmente
+    console.log(data);
+};
 
-                  <Link to="/login" className="boton2">Login</Link>
-                  </form>
-                </div>
-                </div>
-            </main>
+return (
+    <div className="body1">
+    <h2 className="titulo-centrado">Iniciar Sesion</h2>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossOrigin="anonymous" 
+        referrerPolicy="no-referrer"
+    />
+    <form onSubmit={handleSubmit(onSubmit)}>
+        <label>
+        <i className="far fa-user"></i> Usuario:
+        <input type="text" id="usuario_reg" name="usuario_reg" {...register('usuario_reg', { required: true })} autoComplete="username" />
+        </label>
+        <label>
+        <i className="fa-solid fa-lock"></i> Contraseña:
+        <input type="password" id="contrasena_reg" name="contrasena_reg" {...register('contrasena', { required: true })}autoComplete="current-password" />
+        </label>
+        <label>
+        <input type="checkbox" id="mantener_sesion" name="mantener_sesion" {...register('mantener_sesion')} />
+        Mantener la sesión abierta
+        </label>
+        <button type="submit" value="RLogin">Iniciar Sesion </button>
+    </form>
+    </div>
+);
+};
 
-            </div>   
-          
-        );
-    }
-}
-
-export default Login;
+export default Formulario;
