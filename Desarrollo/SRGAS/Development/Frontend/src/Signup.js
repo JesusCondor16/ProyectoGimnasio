@@ -4,6 +4,7 @@ import Validation from './SignupValidation'
 import axios from 'axios'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import './components/css/index.css';
 function Signup() {
     const [formData, setFormData] = useState({
         contrasenia: "",
@@ -55,36 +56,34 @@ function Signup() {
     };
 
     return (
-        <div className='d-flex justify-content-center align-items-center bg-danger vh-100'>
-            <div className="bg-white p-3 rounded w-25">
-                <h1 className="mt-4">Registro</h1>
-                <form onSubmit={handleSubmit} className="mt-4">
-                    <div className="mb-3 d-flex align-items-center">
-                        <label htmlFor="contrasenia" className="me-2"><strong>Contraseña:</strong></label>
+        <div className='signup-container'>
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+                integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+                crossOrigin="anonymous" 
+                referrerPolicy="no-referrer"
+            />
+            <div className="signup-form">
+                <h1 className="custom-signup-title">Registro</h1>
+                <form onSubmit={handleSubmit} className="signup-form-content">
+                    <div className="contenedor-1">
+                        <label>
+                        <i className="far fa-user"></i>
+                        </label>
+                        <label htmlFor="nombre" className="custom-label"><strong>Nombre:</strong></label>
                         <input
-                            type="password"
-                            className="form-control"
-                            name="contrasenia"
-                            placeholder="Ingrese Contraseña"
-                            value={formData.contrasenia}
+                            type="text"
+                            className="form-control "
+                            name="nombre"
+                            placeholder="Ingrese Nombre"
+                            value={formData.nombre}
                             onChange={handleInputChange}
                         />
-                        {errors.contrasenia && <div style={{ color: 'red' }} className="error-message">{errors.contrasenia}</div>}
+                        {errors.nombre && <div  className="error-message">{errors.nombre}</div>}
                     </div>
-                    <div className="mb-3 d-flex align-items-center">
-                        <label htmlFor="email" className="me-2"><strong>Correo:</strong></label>
-                        <input
-                            type="email"
-                            className="form-control"
-                            name="correo"
-                            placeholder="Ingrese Correo Electrónico"
-                            value={formData.correo}
-                            onChange={handleInputChange}
-                        />
-                        {errors.correo && <div style={{ color: 'red' }} className="error-message">{errors.correo}</div>}
-                    </div>
-                    <div className="mb-3 d-flex align-items-center">
-                        <label htmlFor="apellido" className="me-2"><strong>Apellido:</strong></label>
+                    <div className="contenedor-1">
+                        <label htmlFor="apellido" className="custom-label"><strong>Apellido:</strong></label>
                         <input
                             type="text"
                             className="form-control"
@@ -93,22 +92,40 @@ function Signup() {
                             value={formData.apellido}
                             onChange={handleInputChange}
                         />
-                        {errors.apellido && <div style={{ color: 'red' }} className="error-message">{errors.apellido}</div>}
+                        {errors.apellido && <div  className="error-message">{errors.apellido}</div>}
                     </div>
-                    <div className="mb-3 d-flex align-items-center">
-                        <label htmlFor="nombre" className="me-2"><strong>Nombre:</strong></label>
+                    <div className="contenedor-1">
+                        <label>
+                        <i className="fas fa-envelope"></i>
+                        </label>
+                        <label htmlFor="email" className="custom-label"><strong>Correo:</strong></label>
                         <input
-                            type="text"
+                            type="email"
                             className="form-control"
-                            name="nombre"
-                            placeholder="Ingrese Nombre"
-                            value={formData.nombre}
+                            name="correo"
+                            placeholder="Ingrese Correo Electrónico"
+                            value={formData.correo}
                             onChange={handleInputChange}
                         />
-                        {errors.nombre && <div style={{ color: 'red' }} className="error-message">{errors.nombre}</div>}
+                        {errors.correo && <div className="error-message">{errors.correo}</div>}
                     </div>
-                    <div className="mb-3 d-flex align-items-center">
-                        <label htmlFor="dni" className="me-2"><strong>DNI:</strong></label>
+                    <div className="contenedor-1">
+                        <label>
+                        <i className="fa-solid fa-lock"></i>
+                        </label>
+                        <label htmlFor="contrasenia" className="custom-label"><strong>Contraseña:</strong></label>
+                        <input
+                            type="password"
+                            className="form-control"
+                            name="contrasenia"
+                            placeholder="Ingrese Contraseña"
+                            value={formData.contrasenia}
+                            onChange={handleInputChange}
+                        />
+                        {errors.contrasenia && <div  className="error-message">{errors.contrasenia}</div>}
+                    </div>
+                    <div className="contenedor-1">
+                        <label htmlFor="dni" className="custom-label"><strong>DNI:</strong></label>
                         <input
                             type="text"
                             className="form-control"
@@ -117,10 +134,10 @@ function Signup() {
                             value={formData.dni}
                             onChange={handleInputChange}
                         />
-                        {errors.dni && <div style={{ color: 'red' }} className="error-message">{errors.dni}</div>}
+                        {errors.dni && <div  className="error-message">{errors.dni}</div>}
                     </div>
-                    <div className="mb-3 d-flex align-items-center">
-                        <label htmlFor="fecha_nacimiento" className="me-2"><strong>Fecha de Nacimiento:</strong></label>
+                    <div className="contenedor-1">
+                        <label htmlFor="fecha_nacimiento" className="custom-label"><strong>Fecha de Nacimiento:</strong></label>
                         <DatePicker
                             id="fecha_nacimiento"
                             className="form-control"
@@ -130,10 +147,9 @@ function Signup() {
                             placeholderText="Seleccionar fecha"
                         />
                     </div>
-
-                    <div className="mb-3">
-                        <button type='submit' className='btn btn-success w-100 rounded-0'>Crear Cuenta</button>
-                        <Link to="/login" className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Login</Link>
+                    <div className="custom-buttons">
+                        <button type='submit' className='custom-create-button'>Crear Cuenta</button>
+                        <Link to="/login" className='custom-login-button'>Login</Link>
                     </div>
                 </form>
             </div>
