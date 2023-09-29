@@ -37,9 +37,9 @@ function Login() {
             <main className='d-flex justify-content-center align-items-center bg-danger vh-100'>
             <div className="bg-white p-3 rounded w-25">            
             <h1 className="mt-4">Iniciar Sesión</h1>
-            <form onSubmit={handleSubmit} className="mt-4">
-                <div className="mb-3 d-flex align-items-center">
-                    <label htmlFor="correo" className="me-2"><strong>Correo Electrónico</strong></label>
+            <form onSubmit={handleSubmit} className="campo-txt">
+                <div className="mb-3 ">
+                    <label htmlFor="correo" className="txt-correo-e"><strong>Correo Electrónico:</strong></label>
                     <input
                         type="email"
                         id="correo"
@@ -49,8 +49,8 @@ function Login() {
                         required
                     />
                 </div>
-                <div className="mb-3 d-flex align-items-center">
-                    <label htmlFor="contrasenia" className="me-2"><strong>Contraseña</strong></label>
+                <div className="mb-3 ">
+                    <label htmlFor="contrasenia" className="txt-contrasenia"><strong>Contraseña:</strong></label>
                     <input
                         type="password"
                         id="contrasenia"

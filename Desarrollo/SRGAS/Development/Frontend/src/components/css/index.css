@@ -43,6 +43,76 @@ body {
     margin-bottom: 50px; /* Mover hacia abajo */
 }
 
+/*Pagina Welcome*/
+
+
+
+.btnLogin{
+  width: 500px;
+  display: flex;
+  margin-top: 10px; /* Mover hacia abajo */
+  margin-left: 380px; /* Mover hacia la izquierda */
+  margin-bottom: 50px; /* Mover hacia abajo */
+  color: white;
+}
+
+.btnRegistrarse{
+  width: 500px;
+    display: flex;
+    margin-top: 10px; /* Mover hacia abajo */
+    margin-left: 200px; /* Mover hacia la izquierda */
+    margin-bottom: 50px; /* Mover hacia abajo */
+    color: white;
+}
+/*Login*/
+
+.mt-4{
+  text-transform: uppercase;
+    text-decoration:solid;
+    margin-top: 20px;
+    text-align: center;
+    color: #f14805;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.mb-3{
+  margin-left: 60px;
+}
+
+.titulo-Iniciar{
+  text-transform: uppercase;
+  text-decoration:solid;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.txt-correo-e{
+  
+    text-decoration:solid;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-right:20px;
+}
+
+.txt-contrasenia{
+  text-decoration:solid;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-right:72px;
+}
 /* Signup.css  Registro */
 form label .fa-solid {
     font-size: 20px;
@@ -146,7 +216,7 @@ form label .fa-user {
     height: 50px;
     bottom: 0px;
     align-items: center; 
-    background-color: #a30f0f; 
+    background-color: #333; 
     color: #fff; 
     padding: 10px; 
     display:flex
@@ -156,13 +226,16 @@ form label .fa-user {
 .contactanos {
     text-align: center; 
     padding: 5px; 
-    background-color: #0c0c0caf; 
+    background-color: #333; 
+    margin-left: 250px;
 }
   
   .numero {
     text-align: center;
     padding: 5px; 
-    background-color: #0c0c0caf; 
+    background-color: #333; 
     margin: 10px ; 
     color: white; 
+    margin-left: 650px;
   }
+
