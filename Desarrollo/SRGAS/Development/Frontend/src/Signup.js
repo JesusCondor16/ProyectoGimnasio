@@ -4,6 +4,8 @@ import Validation from './SignupValidation'
 import axios from 'axios'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Cabecera from './Cabecera';
+import Pie from './Pie';
 import './components/css/index.css';
 function Signup() {
     const [formData, setFormData] = useState({
@@ -56,7 +58,10 @@ function Signup() {
     };
 
     return (
-        <div className='signup-container'>
+        <div>
+        <Cabecera />
+        <main className='signup-container'>
+            
             <link
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -153,6 +158,8 @@ function Signup() {
                     </div>
                 </form>
             </div>
+        </main>
+        <Pie />
         </div>
     )
 }

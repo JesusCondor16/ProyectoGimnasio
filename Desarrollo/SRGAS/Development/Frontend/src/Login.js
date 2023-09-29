@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import Validation from './LoginValidation';
 import axios from 'axios';
-
+import Cabecera from './Cabecera';
+import Pie from './Pie'
 function Login() {
     const [formData, setFormData] = useState({
         correo: '',
@@ -31,7 +32,9 @@ function Login() {
         }
     };
     return (
-        <div className='d-flex justify-content-center align-items-center bg-danger vh-100'>
+        <div>
+            <Cabecera></Cabecera>
+            <main className='d-flex justify-content-center align-items-center bg-danger vh-100'>
             <div className="bg-white p-3 rounded w-25">            
             <h1 className="mt-4">Iniciar Sesión</h1>
             <form onSubmit={handleSubmit} className="mt-4">
@@ -61,7 +64,10 @@ function Login() {
                 <Link to="/signup" className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Crear cuenta</Link>
             </form></div>
 
+        </main>
+        <Pie></Pie>
         </div>
+        
     )
 }
 
