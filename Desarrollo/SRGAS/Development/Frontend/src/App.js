@@ -6,6 +6,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Signup from './Signup';
 import Home from './Home';
 import Welcome from './Welcome';
+import ImageDetail from "./ImageDetail";
+import { ReservationProvider } from './ReservationContext';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Route path='/login' element={<Login />}></Route>
       <Route path='/signup' element={<Signup />}></Route>
       <Route path='/home' element={<Home />}></Route>
+      <Route path="/imagen/:imageName" element={<ImageDetail />} />
     </Routes>
     </BrowserRouter>
   

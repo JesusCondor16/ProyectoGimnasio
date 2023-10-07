@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Cabecera from './Cabecera';
-import Pie from './Pie';
+import Cabecera from "./Cabecera";
+import Pie from "./Pie";
+import { FaShoppingCart } from "react-icons/fa";
 import Eliptica from './components/img/Eliptica.jpg';
 import TrotadoraCurva from './components/img/TrotadoraCurva.png';
 import TrotadoraElectrica from './components/img/TrotadoraElectrica.png';
@@ -18,51 +20,76 @@ import DiscoOlimpico5kg from './components/img/DiscoOlimpico5kg.png';
 import DiscoOlimpico15kg from './components/img/DiscoOlimpico15kg.jpg';
 import BancaInclinada from './components/img/BancaInclinada.jpg';
 import BancaPlana from './components/img/BancaPlana.jpg';
+import { useReservationContext } from './ReservationContext';
 function Home() {
-    const [maquinasData, setMaquinasData] = useState([]);
-    const [cardioData, setCardioData] = useState([]);
+  const [maquinasData, setMaquinasData] = useState([]);
+  const [cardioData, setCardioData] = useState([]);
+  const navigate = useNavigate();
+  const { reservedMachines, clearReservations  } = useReservationContext();
+  const [reservedProducts, setReservedProducts] = useState([]);
+  const handleClearReservationsClick = () => {
+    // Llama a la función clearReservations para eliminar todas las reservas
+    clearReservations();
+  };
+  useEffect(() => {
+    axios.get("http://localhost:8081/maquinas")
+      .then((response) => {
+        setMaquinasData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error al obtener los datos de máquinas:", error);
+      });
 
-    useEffect(() => {
-        
-        axios.get("http://localhost:8081/maquinas") 
-            .then((response) => {
-                setMaquinasData(response.data);
-            })
-            .catch((error) => {
-                console.error("Error al obtener los datos de máquinas:", error);
-            });
+    axios.get("http://localhost:8081/cardio")
+      .then((response) => {
+        setCardioData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error al obtener los datos de cardio:", error);
+      });
+  }, []); // Este useEffect se ejecuta una vez al montar el componente
 
-        axios.get("http://localhost:8081/cardio") 
-            .then((response) => {
-                setCardioData(response.data);
-            })
-            .catch((error) => {
-                console.error("Error al obtener los datos de cardio:", error);
-            });
-    }, []);
-
+  const redirectToImageDetail = (imageName) => {
+    // Redirige a la página de detalle de la imagen con el nombre de la imagen
+    navigate(`/imagen/${imageName}`);
+    
+  };
     return (
 
         <div>
-            <Cabecera></Cabecera>
+            <Cabecera></Cabecera> 
             <main>
                 <div className='ContenedorPrincipal'>
+                <div className="productos-reservados">
+                <h2>Productos Reservados</h2>
+                {reservedMachines.length === 0 ? (
+                <p>No hay productos reservados.</p>
+                ) : (
+                <ul>
+                {reservedMachines.map((machine, index) => (
+                <li key={index}>
+                <strong>Nombre de la máquina:</strong> {machine.name}, <strong>Horario:</strong> {machine.horario}
+                </li>
+                  ))}
+                  </ul>
+                  )}
+                  <button onClick={handleClearReservationsClick}>Eliminar Reservas</button>
+                </div>
                     <div className="titulo-Cardio">Cardio</div>
 
-                    
-                       <div className="img-Eliptica">
-                       <img src={Eliptica} alt="Eliptica" />
-                       <div className= "titulo-Eliptica">Máquina Eliptica</div>
-                       </div>
+                        <div className="img-Eliptica" onClick={()=> redirectToImageDetail('eliptica')}>
+                            <img src={Eliptica}alt="Eliptica" />
+                            <div className="titulo-Eliptica">Máquina Eliptica</div>
+                        </div>
 
                 
-                    <div className="img-TrotadoraCurva">
+                    <div className="img-TrotadoraCurva" onClick={()=> redirectToImageDetail('trotadoraCurva')}>
                     <img src={TrotadoraCurva} alt="TrotadoraCurva" />
                     <div className= "titulo-TrotadoraCurva">Trotadora curva</div>
                 </div>
 
                
-                    <div className="img-TrotadoraElectrica">
+                    <div className="img-TrotadoraElectrica" onClick={()=> redirectToImageDetail('trotadoraElectrica')}>
                     <img src={TrotadoraElectrica} alt="TrotadoraElectrica" />
                     <div className= "titulo-TrotadoraElectrica">Trotadora eléctrica</div>
                 </div>
@@ -148,8 +175,6 @@ function Home() {
         
     );
 
-   
-     
     
 }
 
