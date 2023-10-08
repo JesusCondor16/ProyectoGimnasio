@@ -1,4 +1,4 @@
-drop database gymbob;
+
 create database gymbob;
 use gymbob;
 -- Crear la tabla Cliente

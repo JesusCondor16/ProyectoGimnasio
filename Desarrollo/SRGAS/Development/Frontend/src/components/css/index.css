@@ -480,6 +480,70 @@ text-decoration:solid;
 }
 
 /************FIN PAGINA WELCOME*************/
+/************Detalles de imagen *************/
+/* Estilos para el contenedor principal */
+.image-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  background-color: #f0f0f0; /* Cambia el color de fondo según tus preferencias */
+}
+
+/* Estilos para la sección de detalles de la imagen */
+.image-detail {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 80%; /* Ancho del componente */
+  max-width: 600px; /* Ancho máximo */
+  margin: 20px; /* Márgenes alrededor del componente */
+}
+
+/* Estilos para la imagen */
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la etiqueta "Seleccionar Horario" */
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la lista desplegable */
+.horario-container select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el botón "Reservar" */
+.horario-container button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.horario-container button:hover {
+  background-color: #1e6ea7; /* Cambia el color de fondo al pasar el mouse */
+}
+
 
 
   /*********** PIE DE PAGINA **************/
