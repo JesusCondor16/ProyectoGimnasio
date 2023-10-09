@@ -95,7 +95,7 @@ function Home() {
                 </div>
 
                 
-                    <div className="img-MiniEscaladora">
+                    <div className="img-MiniEscaladora" onClick={()=> redirectToImageDetail('miniEscaladora')}>
                     <img src={MiniEscaladora} alt="MiniEscaladora" />
                     <div className= "titulo-MiniEscaladora">Mini escaladora</div>
                 </div>
@@ -103,65 +103,65 @@ function Home() {
                     
                  
 
-                <div className="titulo-MaquinasDeFuerza">Máquinas de fuerza</div>
+                <div className="titulo-MaquinasDeFuerza" >Máquinas de fuerza</div>
                     <main>
                     
-                    <div className="img-MancuernaHexagonal5kg">
+                    <div className="img-MancuernaHexagonal5kg" onClick={()=> redirectToImageDetail('mancuerna5kg')}>
                       <img src={MancuernaHexagonal5kg} alt="MancuernaHexagonal5kg" />
                       <div className= "titulo-MancuernaHexagonal5kg">Mancuerna Hexagonal 5 kg</div>
                     </div>
 
-                    <div className="img-MancuernaHexagonal15kg">
+                    <div className="img-MancuernaHexagonal15kg" onClick={()=> redirectToImageDetail('mancuerna15kg')}>
                       <img src={MancuernaHexagonal15kg} alt="MancuernaHexagonal15kg" />
                       <div className= "titulo-MancuernaHexagonal15kg">Mancuerna Hexagonal 15 kg</div>
                     </div>
 
-                    <div className="img-MancuernaHexagonal20kg">
+                    <div className="img-MancuernaHexagonal20kg" onClick={()=> redirectToImageDetail('mancuerna20kg')}>
                       <img src={MancuernaHexagonal20kg} alt="MancuernaHexagonal20kg" />
                       <div className= "titulo-MancuernaHexagonal20kg">Mancuerna Hexagonal 20 kg</div>
                     </div>
 
-                    <div className="img-RuedaAbdominales">
+                    <div className="img-RuedaAbdominales" onClick={()=> redirectToImageDetail('ruedaAbdominales')}>
                       <img src={RuedaAbdominales} alt="RuedaAbdominales" />
                       <div className= "titulo-RuedaAbdominales">Rueda Abdominales</div>
                     </div>
 
-                    <div className="img-BarraOlimpica">
+                    <div className="img-BarraOlimpica" onClick={()=> redirectToImageDetail('barraOlimpica')}>
                       <img src={BarraOlimpica} alt="BarraOlimpica" />
                       <div className= "titulo-BarraOlimpica">Barra Olimpica</div>
                     </div>
 
-                    <div className="img-BarraOlimpicaGruesa">
+                    <div className="img-BarraOlimpicaGruesa" onClick={()=> redirectToImageDetail('barraOlimpicaGruesa')}>
                       <img src={BarraOlimpicaGruesa} alt="BarraOlimpicaGruesa" />
                       <div className= "titulo-BarraOlimpicaGruesa">Barra Olimpica Gruesa</div>
                     </div>
 
-                    <div className="img-BarraOlimpicaRecta">
+                    <div className="img-BarraOlimpicaRecta" onClick={()=> redirectToImageDetail('barraOlimpicaRecta')}>
                       <img src={BarraOlimpicaRecta} alt="BarraOlimpicaRecta" />
                       <div className= "titulo-BarraOlimpicaRecta">Barra Olimpica Recta</div>
                     </div>
 
-                    <div className="img-MaquinaDominadas">
+                    <div className="img-MaquinaDominadas" onClick={()=> redirectToImageDetail('estacionDominadasParalelas')}>
                       <img src={MaquinaDominadas} alt="MaquinaDominadas" />
                       <div className= "titulo-MaquinaDominadas">Maquina Dominadas</div>
                     </div>
 
-                    <div className="img-DiscoOlimpico5kg">
+                    <div className="img-DiscoOlimpico5kg" onClick={()=> redirectToImageDetail('discoOlimpico5kg')}>
                       <img src={DiscoOlimpico5kg} alt="DiscoOlimpico5kg" />
                       <div className= "titulo-DiscoOlimpico5kg">Disco Olimpico 5kg</div>
                     </div>
 
-                    <div className="img-DiscoOlimpico15kg">
+                    <div className="img-DiscoOlimpico15kg" onClick={()=> redirectToImageDetail('discoOlimpico15kg')}>
                       <img src={DiscoOlimpico15kg} alt="DiscoOlimpico15kg" />
                       <div className= "titulo-DiscoOlimpico15kg">Disco Olimpico 15kg</div>
                     </div>
 
-                    <div className="img-BancaInclinada">
+                    <div className="img-BancaInclinada" onClick={()=> redirectToImageDetail('bancaMultiFuncionInclinable')}>
                       <img src={BancaInclinada} alt="BancaInclinada" />
                       <div className= "titulo-BancaInclinada">Banca Inclinada</div>
                     </div>
 
-                    <div className="img-BancaPlana">
+                    <div className="img-BancaPlana" onClick={()=> redirectToImageDetail('bancaEjercicios')}>
                       <img src={BancaPlana} alt="BancaPlana" />
                       <div className= "titulo-BancaPlana">Banca Plana</div>
                     </div>
