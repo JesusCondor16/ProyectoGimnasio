@@ -61,8 +61,11 @@ function Home() {
             <Cabecera></Cabecera> 
             <main>
             <Link to="/reserva" className="gestor-cesta-button">
-        Gestor de Cesta
-      </Link>
+            Gestor de Cesta
+            </Link>
+            <Link to="/perfil" className="perfil-button">
+              Perfil de usuario
+            </Link>
                 <div className='ContenedorPrincipal'>
                 <div className="productos-reservados">
                 <h2>Productos Reservados</h2>
