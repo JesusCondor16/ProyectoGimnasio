@@ -46,6 +46,7 @@ function Signup() {
             try {
                 const response = await axios.post("http://localhost:8081/signup", formData);
                 if (response.data === "Success") {
+                    localStorage.setItem('userData', JSON.stringify(formData));
                 } else {
                 }
             } catch (error) {

@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     host: "localhost",
     database: "gymbob",
     user: "root",
-    password: "Jesuscondor1*"
+    password: "Musica159"
 })
 
 app.post('/signup', (req, res) => {
