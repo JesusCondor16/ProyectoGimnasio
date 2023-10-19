@@ -4,16 +4,13 @@ import Pie from "./Pie";
 import { useParams, useNavigate } from "react-router-dom";
 import imageDetails from "./Data";
 import { FaShoppingCart } from "react-icons/fa";
-import { useReservationContext } from "./ReservationContext";
 
 function ImageDetail() {
   const { imageName } = useParams();
   const details = imageDetails[imageName];
   const navigate = useNavigate();
-  const { reservedMachines, addReservedMachine } = useReservationContext();
-
   const [horarioSeleccionado, setHorarioSeleccionado] = useState("");
-
+  
   const handleHorarioChange = (event) => {
     setHorarioSeleccionado(event.target.value);
   };
@@ -24,8 +21,13 @@ function ImageDetail() {
       horario: horarioSeleccionado,
     };
 
-    // Agregar la máquina al contexto de reserva
-    addReservedMachine(machine);
+    // Obtener las reservas anteriores del almacenamiento local
+    const storedMachines = JSON.parse(localStorage.getItem("reservedMachines")) || [];
+    // Agregar la nueva reserva a la lista
+    storedMachines.push(machine);
+    // Guardar la lista actualizada en el almacenamiento local
+    localStorage.setItem("reservedMachines", JSON.stringify(storedMachines));
+
   };
 
   return (

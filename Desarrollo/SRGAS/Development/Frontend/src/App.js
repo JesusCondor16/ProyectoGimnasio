@@ -7,7 +7,8 @@ import Signup from './Signup';
 import Home from './Home';
 import Welcome from './Welcome';
 import ImageDetail from "./ImageDetail";
-import { ReservationProvider } from './ReservationContext';
+import GestordeCanasta from './GestordeCanasta';
+import Perfil from './perfil';
 
 function App() {
   return (
@@ -18,11 +19,11 @@ function App() {
       <Route path='/signup' element={<Signup />}></Route>
       <Route path='/home' element={<Home />}></Route>
       <Route path="/imagen/:imageName" element={<ImageDetail />} />
-      
+      <Route path='/gestordecanasta' element={<GestordeCanasta />} />
+      <Route path='/perfil' element={<Perfil />} />
     </Routes>
     </BrowserRouter>
-  
-    
+   
   );
 }
 

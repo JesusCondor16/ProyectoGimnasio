@@ -19,10 +19,22 @@ function Login() {
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        const handleSuccessfulLogin = (userData) => {
+            // Almacenar los datos del usuario en localStorage
+            localStorage.setItem('userEmail', formData.correo); // Usar el correo electrónico como clave única
+            localStorage.setItem(formData.correo, JSON.stringify(userData));
+        
+            // Redireccionar al usuario a la página de inicio
+          };    
         try {
             const response = await axios.post("http://localhost:8081/login", formData);
             if (response.data === "Success") {
+                const userDataFromServer = {
+                    nombre: 'Nombre del Usuario',
+                    apellido: 'Apellido del Usuario',
+                    // Otros campos de datos del usuario
+                  };
+                  handleSuccessfulLogin(userDataFromServer);
                 navigate('/home');
             } else {
                 setError('Credenciales incorrectas. Inténtalo de nuevo.');

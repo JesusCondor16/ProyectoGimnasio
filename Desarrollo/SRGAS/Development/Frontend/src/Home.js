@@ -20,18 +20,18 @@ import DiscoOlimpico5kg from './components/img/DiscoOlimpico5kg.png';
 import DiscoOlimpico15kg from './components/img/DiscoOlimpico15kg.jpg';
 import BancaInclinada from './components/img/BancaInclinada.jpg';
 import BancaPlana from './components/img/BancaPlana.jpg';
-import { useReservationContext } from './ReservationContext';
 import { Link } from "react-router-dom";
 function Home() {
+  const redirectToGestorCesta = () => {
+    window.location.href = '/GestordeCanasta'; 
+  };
+  const redirectToPerfil = () => {
+    window.location.href = '/perfil';  
+  };
   const [maquinasData, setMaquinasData] = useState([]);
   const [cardioData, setCardioData] = useState([]);
   const navigate = useNavigate();
-  const { reservedMachines, clearReservations  } = useReservationContext();
-  const [reservedProducts, setReservedProducts] = useState([]);
-  const handleClearReservationsClick = () => {
-    // Llama a la función clearReservations para eliminar todas las reservas
-    clearReservations();
-  };
+
   useEffect(() => {
     axios.get("http://localhost:8081/maquinas")
       .then((response) => {
@@ -55,42 +55,26 @@ function Home() {
     navigate(`/imagen/${imageName}`);
     
   };
+  
     return (
 
         <div>
             <Cabecera></Cabecera> 
             <main>
-            <Link to="/reserva" className="gestor-cesta-button">
+            <button className="gestor-cesta-button" onClick={redirectToGestorCesta}>
             Gestor de Cesta
-            </Link>
-            <Link to="/perfil" className="perfil-button">
-              Perfil de usuario
-            </Link>
+            </button>
+            <button className="perfil-button" onClick={redirectToPerfil}>
+            Perfil de usuario
+            </button>
                 <div className='ContenedorPrincipal'>
-                <div className="productos-reservados">
-                <h2>Productos Reservados</h2>
-                {reservedMachines.length === 0 ? (
-                <p>No hay productos reservados.</p>
-                ) : (
-                <ul>
-                {reservedMachines.map((machine, index) => (
-                <li key={index}>
-                <strong>Nombre de la máquina:</strong> {machine.name}, <strong>Horario:</strong> {machine.horario}
-                </li>
-                  ))}
-                  </ul>
-                  )}
-                  <button onClick={handleClearReservationsClick}>Eliminar Reservas</button>
-                </div>
-                
+
                     <div className="titulo-Cardio">Cardio</div>
 
                         <div className="img-Eliptica" onClick={()=> redirectToImageDetail('eliptica')}>
                             <img src={Eliptica}alt="Eliptica" />
                             <div className="titulo-Eliptica">Máquina Eliptica</div>
-                        </div>
-
-                
+                        </div>               
                     <div className="img-TrotadoraCurva" onClick={()=> redirectToImageDetail('trotadoraCurva')}>
                     <img src={TrotadoraCurva} alt="TrotadoraCurva" />
                     <div className= "titulo-TrotadoraCurva">Trotadora curva</div>
