@@ -1,4 +1,4 @@
-
+drop database gymbob;
 create database gymbob;
 use gymbob;
 -- Crear la tabla Cliente
@@ -22,27 +22,37 @@ CREATE TABLE Tarjeta (
 -- Crear la tabla Premio
 CREATE TABLE Premio (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    tipo VARCHAR(255),
-    cliente_id INT,
-    imagen VARCHAR(255),
-    FOREIGN KEY (cliente_id) REFERENCES Cliente(id),
-    costo INT
+    nombre VARCHAR(255),    
+    imagen VARCHAR(255)    
 );
+
+CREATE TABLE Cliente_Premio (
+    cliente_id INT,
+    premio_id INT,
+    PRIMARY KEY (cliente_id, premio_id),
+    FOREIGN KEY (cliente_id) REFERENCES Cliente(id),
+    FOREIGN KEY (premio_id) REFERENCES Premio(id)
+);
+
 -- Crear la tabla Plan
 CREATE TABLE Plan (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    tiempo DATE,
+    duracion INT,
     tipo VARCHAR(255),
-    descripcion VARCHAR(255),
+    descripcion VARCHAR(255)
+);
+CREATE TABLE Cliente_Plan (
     cliente_id INT,
-    FOREIGN KEY (cliente_id) REFERENCES Cliente(id)
+    plan_id INT,
+    PRIMARY KEY (cliente_id, plan_id),
+    FOREIGN KEY (cliente_id) REFERENCES Cliente(id),
+    FOREIGN KEY (plan_id) REFERENCES Plan(id)
 );
 -- Crear la tabla Alimentos
 CREATE TABLE Alimentos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     tipo VARCHAR(255),
-    calorias INT,
-    proteinas INT,
+    nombre_platillo VARCHAR(255),
     imagen VARCHAR(255)
 );
 -- Crear la tabla Plan_Alimentos para representar la relación entre Plan y Alimentos
@@ -157,4 +167,67 @@ VALUES ('Mancuerna 15 kg', 'Disponible', 'Ultimate Fitness', 'Hexagonal', './img
 INSERT INTO Maquina (nombre, estado, marca, modelo, imagen, id_tipo) 
 VALUES ('Mancuerna 20 kg', 'Disponible', 'Ultimate Fitness', 'Hexagonal', './img/Mancuerna-hexagonal-20kg.jpg', 2);
 
-select * from maquina;
+-- Insertar planes con duración en meses como número entero
+INSERT INTO Plan (duracion, tipo, descripcion)
+VALUES (3, 'Reducir Grasa', 'Plan para reducir grasa con dieta y ejercicio.');
+
+INSERT INTO Plan (duracion, tipo, descripcion)
+VALUES (2, 'Tonificar', 'Plan para tonificar y fortalecer los músculos.');
+
+INSERT INTO Plan (duracion, tipo, descripcion)
+VALUES (4, 'Aumentar Masa Muscular', 'Plan para ganar masa muscular y fuerza.');
+
+-- Alimentos para el plan de Reducir Grasa
+-- Desayuno
+INSERT INTO Alimentos (tipo, nombre_platillo, imagen)
+VALUES ('Desayuno', 'Tazón de avena con frutas (manzanas, bayas o plátanos) y nueces, Té verde o café negro sin azúcar', 'imagen_desayuno_reducir_grasa.jpg');
+
+-- Almuerzo
+INSERT INTO Alimentos (tipo, nombre_platillo, imagen)
+VALUES ('Almuerzo', 'Pechuga de pollo a la parrilla con una ensalada mixta (verduras frescas y hojas verdes), Sopa de vegetales sin crema, Una porción de arroz integral', 'imagen_almuerzo_reducir_grasa.jpg');
+
+-- Cena
+INSERT INTO Alimentos (tipo, nombre_platillo, imagen)
+VALUES ('Cena', 'Salmón al horno con brócoli al vapor, Ensalada de espinacas con aceite de oliva y vinagre balsámico', 'imagen_cena_reducir_grasa.jpg');
+
+-- Alimentos para el plan de Tonificar
+-- Desayuno
+INSERT INTO Alimentos (tipo, nombre_platillo, imagen)
+VALUES ('Desayuno', 'Batido de proteínas con proteína en polvo, plátano y espinacas, Té o café sin azúcar', 'imagen_desayuno_tonificar.jpg');
+
+-- Almuerzo
+INSERT INTO Alimentos (tipo, nombre_platillo, imagen)
+VALUES ('Almuerzo', 'Pechuga de pavo a la parrilla con batata al horno, Ensalada de garbanzos con verduras y aderezo ligero', 'imagen_almuerzo_tonificar.jpg');
+
+-- Cena
+INSERT INTO Alimentos (tipo, nombre_platillo, imagen)
+VALUES ('Cena', 'Pescado a la parrilla (por ejemplo, tilapia o salmón), Espárragos asados con aceite de oliva y ajo', 'imagen_cena_tonificar.jpg');
+
+-- Alimentos para el plan de Aumentar Masa Muscular
+-- Desayuno
+INSERT INTO Alimentos (tipo, nombre_platillo, imagen)
+VALUES ('Desayuno', 'Tortilla de claras de huevo con espinacas y pimientos, Avena con plátanos y almendras', 'imagen_desayuno_aumentar_masa_muscular.jpg');
+
+-- Almuerzo
+INSERT INTO Alimentos (tipo, nombre_platillo, imagen)
+VALUES ('Almuerzo', 'Pollo a la parrilla con arroz integral, Brócoli o espárragos al vapor, Batido de proteínas con proteína en polvo y leche (como merienda)', 'imagen_almuerzo_aumentar_masa_muscular.jpg');
+
+-- Cena
+INSERT INTO Alimentos (tipo, nombre_platillo, imagen)
+VALUES ('Cena', 'Carne magra (res o cerdo magro) con batata y brócoli al vapor, Ensalada de aguacate y tomate', 'imagen_cena_aumentar_masa_muscular.jpg');
+
+-- Insertar datos en Plan_Alimentos automáticamente (cada plan con varios alimentos)
+INSERT INTO Plan_Alimentos (plan_id, alimentos_id)
+SELECT p.id, a.id
+FROM Plan p
+JOIN Alimentos a ON (
+  (p.id = 1 AND a.id IN (1, 2, 3)) -- Plan 1 con alimentos 1, 2 y 3
+  OR
+  (p.id = 2 AND a.id IN (4, 5, 6)) -- Plan 2 con alimentos 4, 5 y 6
+  OR
+  (p.id = 3 AND a.id IN (7, 8, 9)) -- Plan 3 con alimentos 7, 8 y 9
+);
+INSERT INTO Premio (nombre, imagen) VALUES
+('Descuento de 20 soles', 'imagen_descuento_20_soles.jpg'),
+('Tarjeta de regalo de 50 soles en tiendas deportivas', 'imagen_tarjeta_regalo.jpg'),
+('Canjear suplementos vitamínicos', 'imagen_suplementos_vitamicos.jpg');
