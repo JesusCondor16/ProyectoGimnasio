@@ -3,24 +3,26 @@ import Cabecera from './Cabecera';
 import Pie from './Pie';
 
 function Perfil() {
-  const [userData, setUserData] = useState(() => {
-    // Recupera los datos del usuario del localStorage
-    const userEmail = localStorage.getItem('userEmail');
-    if (userEmail) {
-      const storedUserData = localStorage.getItem(userEmail);
-      if (storedUserData) {
-        return JSON.parse(storedUserData);
-      }
-    }
-
-    // Si no se encuentran los datos del usuario, muestra valores predeterminados o en blanco
-    return {
-      nombre: '',
-      apellido: '',
-      correo: '',
-      // Otros campos de datos del usuario
-    };
+  const [userData, setUserData] = useState({
+    nombre: '',
+    apellido: '',
+    correo: '',
   });
+
+  useEffect(() => {
+    // Reemplaza 'tu_cliente_id' con el ID del cliente actual
+    const clienteID = 'tu_cliente_id';
+
+    // Realiza una solicitud GET al servidor para obtener los datos del cliente
+    fetch(`http://localhost:5000/api/clientes/${clienteID}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setUserData(data); // Actualiza el estado con los datos recuperados
+      })
+      .catch((error) => {
+        console.error('Error al recuperar datos del cliente:', error);
+      });
+  }, []);
 
   return (
     <div>
