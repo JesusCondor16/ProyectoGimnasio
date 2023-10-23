@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     host: "localhost",
     database: "gymbob",
     user: "root",
-    password: "Jesuscondor1*"
+    password: "Alphashop_123"
 })
 
 app.post('/signup', (req, res) => {
@@ -25,11 +25,11 @@ app.post('/signup', (req, res) => {
         fechaNacimiento
     ];
 
-    console.log("Valores a insertar en la base de datos:", values); 
+    console.log("Valores a insertar en la base de datos:", values);
 
     db.query(sql, values, (err, data) => {
         if (err) {
-            console.error("Error al insertar en la base de datos:", err); 
+            console.error("Error al insertar en la base de datos:", err);
             return res.json("Error");
         }
         if (data.affectedRows > 0) {
@@ -44,36 +44,36 @@ app.get('/signup', (req, res) => {
     const sql = "SELECT * FROM Cliente";
     db.query(sql, (err, data) => {
         if (err) {
-            console.error("Error al consultar la base de datos:", err); 
+            console.error("Error al consultar la base de datos:", err);
             return res.json("Error");
         }
-        console.log("Contenido de la base de datos (clientes):", data); 
+        console.log("Contenido de la base de datos (clientes):", data);
         return res.json(data);
     });
 });
 
 app.get('/cardio', (req, res) => {
-    const idCategoriaDeseada = 1; 
-    const sql = "SELECT * FROM maquina WHERE id_tipo = ?"; 
+    const idCategoriaDeseada = 1;
+    const sql = "SELECT * FROM maquina WHERE id_tipo = ?";
     db.query(sql, [idCategoriaDeseada], (err, data) => {
         if (err) {
             console.error("Error al consultar la base de datos:", err);
             return res.json("Error");
         }
-        console.log("Contenido de la base de datos (clientes):", data); 
+        console.log("Contenido de la base de datos (clientes):", data);
         return res.json(data);
     });
 });
 
 app.get('/maquinas', (req, res) => {
-    const idCategoriaDeseada = 2; 
-    const sql = "SELECT * FROM maquina WHERE id_tipo = ?"; 
+    const idCategoriaDeseada = 2;
+    const sql = "SELECT * FROM maquina WHERE id_tipo = ?";
     db.query(sql, [idCategoriaDeseada], (err, data) => {
         if (err) {
             console.error("Error al consultar la base de datos:", err);
             return res.json("Error");
         }
-        console.log("Contenido de la base de datos (clientes):", data); 
+        console.log("Contenido de la base de datos (clientes):", data);
         return res.json(data);
     });
 });
