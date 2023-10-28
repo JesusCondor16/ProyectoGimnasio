@@ -20,7 +20,7 @@ import DiscoOlimpico5kg from './components/img/DiscoOlimpico5kg.png';
 import DiscoOlimpico15kg from './components/img/DiscoOlimpico15kg.jpg';
 import BancaInclinada from './components/img/BancaInclinada.jpg';
 import BancaPlana from './components/img/BancaPlana.jpg';
-import { Link } from "react-router-dom";
+
 function Home() {
   const redirectToGestorCesta = () => {
     window.location.href = '/GestordeCanasta'; 

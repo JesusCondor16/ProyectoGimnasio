@@ -28,31 +28,68 @@ function Perfil() {
               });
       }
   }, [userEmail]);
-  
+  const redirectToPagarMembresia = (imageName) => {
+    window.location.href = '/PagarMembresia';  
+  };
+  const redirectToPlanAlimenticio = (imageName) => {
+    window.location.href = '/PlanAlimenticio';  
+  };
+  const redirectToCanjearPremio = (imageName) => {
+    window.location.href = '/CanjearPremio';  
+  };
+  const redirectToPerfil = (imageName) => {
+    window.location.href = '/perfil';  
+  };
+
 
     if (!userEmail) {
         return null;
     }
 
     return (
-        <div>
-            <Cabecera />
-            <div>
-                <h2>Datos del Usuario:</h2>
-                <ul>
-                    <li>
-                        Nombre: {userData ? userData.nombre : ''}
-                    </li>
-                    <li>
-                        Apellido: {userData ? userData.apellido : ''}
-                    </li>
-                    <li>
-                        Correo: {userEmail}
-                    </li>
-                </ul>
-            </div>
-            <Pie />
-        </div>
+        <div className="app">
+  <Cabecera />
+  <div className="content">
+    <div className="buttons">
+    <button className="btm" onClick={redirectToPagarMembresia}>
+        <span>
+        Pagar Membresía
+        </span>
+      </button>
+      <button className="btm" onClick={redirectToPlanAlimenticio}>
+      <span>
+      Plan Alimenticio
+      </span>
+      </button>
+      <button className="btm" onClick={redirectToCanjearPremio}>
+      <span>
+      Canjear Premio
+      </span>
+      </button>
+      <button className="btm" onClick={redirectToPerfil}>
+      <span>
+      Perfil
+      </span>
+      </button>
+    </div>
+    <div className="user-info">
+      <h2>Datos del Usuario:</h2>
+      <ul>
+        <li>
+          Nombre: {userData ? userData.nombre : ''}
+        </li>
+        <li>
+          Apellido: {userData ? userData.apellido : ''}
+        </li>
+        <li>
+          Correo: {userEmail}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <Pie />
+</div>
+
     );
 }
 
