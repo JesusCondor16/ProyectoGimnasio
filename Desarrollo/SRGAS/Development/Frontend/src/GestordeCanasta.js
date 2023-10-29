@@ -32,6 +32,7 @@ function GestordeCanasta() {
         )}
         <button onClick={handleClearReservationsClick}>Eliminar Reservas</button>
       </div>
+      <div className="bloque"></div>
       <Pie></Pie>
     </div>
   );

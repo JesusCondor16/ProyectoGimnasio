@@ -9,6 +9,9 @@ import Welcome from './Welcome';
 import ImageDetail from "./ImageDetail";
 import GestordeCanasta from './GestordeCanasta';
 import Perfil from './perfil';
+import PlanAlimenticio from './PlanAlimenticio';
+import PagarMembresia from './PagarMembresia';
+import CanjearPremio from './CanjearPremio';
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
       <Route path="/imagen/:imageName" element={<ImageDetail />} />
       <Route path='/gestordecanasta' element={<GestordeCanasta />} />
       <Route path='/perfil' element={<Perfil />} />
+      <Route path='/PlanAlimenticio' element={<PlanAlimenticio />} />
+      <Route path='/PagarMembresia' element={<PagarMembresia />} />
+      <Route path='/CanjearPremio' element={<CanjearPremio />} />
     </Routes>
     </BrowserRouter>
    
