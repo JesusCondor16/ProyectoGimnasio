@@ -668,4 +668,218 @@ label {
   }
 }
 
+/***********FORMULARIO DE PAGO***********/
+.formsTarjeta {
+  position: relative; /* Establece la posición relativa para permitir el posicionamiento absoluto de los elementos internos */
+  top: 30px; /* Mueve el formulario 20px hacia abajo (ajusta según tus necesidades) */
+  left: -1000px; /* Mueve el formulario 20px hacia la derecha (ajusta según tus necesidades) */
+  width: 1000px; /* Ancho ampliado */
+}
+
+.formsTarjeta-group {
+  margin: 40px 0;/* Espacio entre los grupos de campos */
+}
+
+.label {
+  display: block; /* Coloca cada etiqueta en una nueva línea */
+}
+
+input {
+  width: 60%; /* Ocupa todo el ancho disponible */
+  padding: 8px; /* Espacio alrededor del texto */
+  margin-top: 10px; /* Espacio entre los campos */
+}
+
+button {
+  margin-top: 10px; /* Espacio entre el último campo y el botón */
+}
+
+.mensaje-error{
+  color:red;
+  margin-left: 320px;
+  font-size: 25px;
+}
+
+.mensaje-exito{
+  color:green;
+  margin-left: 320px;
+  font-size: 25px;
+}
+
+
+.bloqueBlanco{
+   color: white;
+   height: 700px; /* Cambia el valor a la altura deseada */
+}
+
+.boton-pagar{
+  margin-left:400px;
+  
+}
+/***********FIN FORMULARIO DE PAGO***********/
+
+
+/**********CANJEAR PREMIO********************/
+
+  /**********PREMIO 1*********************/
+  .premio1 {
+    background-color: #f7ca90;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 300px; /* Ajusta la posición vertical (abajo) según tus necesidades */
+    left: 450px; /* Ajusta la posición horizontal (izquierda) según tus necesidades */
+    width: 550px; /* Ajusta el ancho según tus necesidades */
+    text-align: center; /* Centra el contenido horizontalmente */
+  }
+  
+  .premio1 h3 {
+    /* Estilos para el título */
+    margin: 0;
+  }
+  
+  .premio1 img {
+    /* Ajusta el tamaño de la imagen según tus necesidades */
+    width: 250px;
+    height: auto; /* Mantiene la relación de aspecto original */
+  }
+  
+  .premio1 h4 {
+    /* Estilos para el mensaje */
+    margin: 10px 0; /* Espaciado superior e inferior */
+  }
+  
+  .botonCanjearPremio1 {
+    /* Estilos para el botón */
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+/***********PREMIO 2*******************/
+.premio2 {
+  background-color: #f7ca90;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 300px; /* Ajusta la posición vertical (abajo) según tus necesidades */
+  left: 1150px; /* Ajusta la posición horizontal (izquierda) según tus necesidades */
+  width: 550px; /* Ajusta el ancho según tus necesidades */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.premio2 h5 {
+  /* Estilos para el título */
+  margin: 0;
+}
+
+.premio2 img {
+  /* Ajusta el tamaño de la imagen según tus necesidades */
+  width: 250px;
+  height: auto; /* Mantiene la relación de aspecto original */
+}
+
+.premio2 h6 {
+  /* Estilos para el mensaje */
+  margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+.botonCanjearPremio2 {
+  /* Estilos para el botón */
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+/*****************PREMIO 3*********************/
+.premio3 {
+  background-color: #f7ca90;
+  padding: 20px; /* Reducí el relleno para dar más espacio */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 300px;
+  left: 1900px;
+  width: 400px; /* Ajusta el ancho según tus necesidades */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.titulo {
+  font-size: 24px; /* Ajusta el tamaño del título según tus necesidades */
+  margin-top: 0; /* Elimina el margen superior del título */
+}
+
+.imagen-contenedor {
+  padding: 20px; /* Espaciado para la imagen */
+}
+
+.imagen {
+  max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+  height: auto;
+}
+
+/* Estilos para el mensaje de advertencia y el botón */
+/* Puedes ajustar estos estilos según tus necesidades */
+p {
+  font-size: 16px;
+}
+
+.advertencia {
+  font-size: 14px;
+  color: red;
+}
+
+.botonCanjearPremio3 {
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+
+
+/* tituloCanjearPremio.css */
+.tituloCanjearPremio {
+  margin-right: 1000px; /* Mover el título a la izquierda */
+  font-size: 40px;  /* Controlar el tamaño del texto */
+  /* Otros estilos que desees agregar */
+}
+
+/***********FIN CANJEAR PREMIO***************/
  
+.bloque {
+  background-color: #fff; /* Color de fondo blanco */
+  padding: 500px; /* Espaciado interno, ajusta según tus necesidades */
+}
+
+.bloque1 {
+  background-color: #fff; /* Color de fondo blanco */
+  padding: 10px; /* Espaciado interno, ajusta según tus necesidades */
+  height: 20px; /* Altura en píxeles, ajusta según tu preferencia */
+}
+
+/*Productos reservados*/
+.productos-reservados {
+  position:center;
+}

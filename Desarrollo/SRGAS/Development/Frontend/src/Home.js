@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Cabecera from "./Cabecera";
 import Pie from "./Pie";
-import { FaShoppingCart } from "react-icons/fa";
 import Eliptica from './components/img/Eliptica.jpg';
 import TrotadoraCurva from './components/img/TrotadoraCurva.png';
 import TrotadoraElectrica from './components/img/TrotadoraElectrica.png';

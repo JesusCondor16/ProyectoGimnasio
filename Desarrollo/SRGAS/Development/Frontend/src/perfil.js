@@ -28,6 +28,9 @@ function Perfil() {
               });
       }
   }, [userEmail]);
+  const redirectToHome = (imageName) => {
+    window.location.href = '/Home';  
+  };  
   const redirectToPagarMembresia = (imageName) => {
     window.location.href = '/PagarMembresia';  
   };
@@ -69,6 +72,11 @@ function Perfil() {
       <button className="btm" onClick={redirectToPerfil}>
       <span>
       Perfil
+      </span>
+      </button>
+      <button className="btm" onClick={redirectToHome}>
+      <span>
+      Pagina Principal
       </span>
       </button>
     </div>

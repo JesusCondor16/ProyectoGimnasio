@@ -14,6 +14,7 @@ import DiscoOlimpico5kg from './components/img/DiscoOlimpico5kg.png';
 import DiscoOlimpico15kg from './components/img/DiscoOlimpico15kg.jpg';
 import BancaInclinada from './components/img/BancaInclinada.jpg';
 import BancaPlana from './components/img/BancaPlana.jpg';
+import AvenaConFrutas from './components/img/AvenaConFrutas.jpg';
 const imageDetails = {
     eliptica: {
       type: "Maquina elíptica",
@@ -128,8 +129,15 @@ const imageDetails = {
       status: "Disponible",
       imageSrc: MancuernaHexagonal20kg,
     },
-   
+
+    desayunoRG: {
+      plan_id: "Reducir grasa",
+      alimentos_id: "Tazón de avena con frutas (manzanas, bayas o plátanos) y nueces",
+      imageSrc: AvenaConFrutas,
+    },
   };
+
+  
   
   export default imageDetails;
   
