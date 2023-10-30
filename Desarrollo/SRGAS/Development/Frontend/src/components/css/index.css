@@ -719,6 +719,44 @@ button {
 /***********FIN FORMULARIO DE PAGO***********/
 
 
+/************PLAN ALIMENTICIO ****************/
+.contenedores {
+  display: flex;
+}
+
+.contenedor {
+  padding: 180px;
+  text-align: center;
+  margin-right: 10px; /* Agrega margen derecho de 10px para separar los contenedores */
+}
+
+.contenedor:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último contenedor */
+}
+
+.contenedor img {
+  max-width: 100%;
+  height: auto;
+  width: 300px;
+  height: 300px;
+}
+
+button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/************ FIN PLAN ALIMENTICIO ***********/
+
+
+
+
 /**********CANJEAR PREMIO********************/
 
   /**********PREMIO 1*********************/
@@ -883,3 +921,5 @@ p {
 .productos-reservados {
   position:center;
 }
+
+
