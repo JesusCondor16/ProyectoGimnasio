@@ -13,6 +13,7 @@ import PlanAlimenticio from './PlanAlimenticio';
 import PagarMembresia from './PagarMembresia';
 import CanjearPremio from './CanjearPremio';
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +28,7 @@ function App() {
       <Route path='/PlanAlimenticio' element={<PlanAlimenticio />} />
       <Route path='/PagarMembresia' element={<PagarMembresia />} />
       <Route path='/CanjearPremio' element={<CanjearPremio />} />
+       
     </Routes>
     </BrowserRouter>
    
