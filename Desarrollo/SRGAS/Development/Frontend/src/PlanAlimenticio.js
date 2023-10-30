@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Cabecera from './Cabecera'; // Importa el componente de cabecera
 import Pie from './Pie'; // Importa el componente de pie de página
-
+import tonificar from './components/img/tonificar.jpg';
+import reducirGrasa from './components/img/reducirGrasa.jpeg';
+import musculo from './components/img/musculo.png';
 
 function PlanAlimenticio() {
     
@@ -20,6 +23,11 @@ function PlanAlimenticio() {
   };
   const redirectToPerfil = (imageName) => {
     window.location.href = '/perfil';  
+  };
+
+  const redirectToPlanDetalle = (plan) => {
+    // Redirecciona a la página de detalles del plan alimenticio
+    window.location.href = `/plan-alimenticio-detalle/${plan}`;
   };
 
 
@@ -56,13 +64,30 @@ function PlanAlimenticio() {
     </div>
 
     
-    <div className="user-info">
-      
-    </div>
-  </div>
-  <Pie />
-</div>
+    <div className="contenedores">
+          {/* Primer contenedor */}
+          <div className="contenedor">
+            <h2>Reducir grasa muscular</h2>
+            <img src={reducirGrasa} alt="reducirGrasa" />
+            <button onClick={() => redirectToPlanDetalle('reducir-grasa')}>Ver</button>
+          </div>
 
+          {/* Segundo contenedor */}
+          <div className="contenedor">
+            <h2>Tonificar</h2>
+            <img src={tonificar} alt="tonificar" />
+            <button onClick={() => redirectToPlanDetalle('tonificar')}>Ver</button>
+          </div>
+
+          {/* Tercer contenedor */}
+          <div className="contenedor">
+            <h2>Aumentar masa muscular</h2>
+            <img src={musculo} alt="musculo" />
+            <button onClick={() => redirectToPlanDetalle('aumentar masa muscular')}>Ver</button>
+          </div>
+          </div>
+       </div>
+     </div>
     );
 }
 
