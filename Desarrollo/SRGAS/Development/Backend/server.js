@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     host: "localhost",
     database: "gymbob",
     user: "root",
-    password: "Jesuscondor1*"
+    password: "Alphashop_123"
 })
 
 app.post('/signup', (req, res) => {
@@ -92,6 +92,28 @@ app.post('/login', (req, res) => {
         }
     });
 });
+
+app.get('/obtenerDatosPorDNI', (req, res) => {
+    const dni = req.query.dni; // Obten el DNI de la consulta GET
+
+    const sql = "SELECT * FROM Cliente WHERE dni = ?";
+
+    db.query(sql, [dni], (err, data) => {
+        if (err) {
+            console.error("Error al consultar la base de datos:", err);
+            return res.status(500).json({ error: "Error en la base de datos" });
+        }
+
+        if (data.length > 0) {
+            // Se encontraron datos para el DNI proporcionado
+            return res.status(200).json(data);
+        } else {
+            // No se encontraron datos para el DNI
+            return res.status(404).json({ error: "Usuario no encontrado" });
+        }
+    });
+});
+
 
 app.listen(8081, () => {
     console.log("listening");
