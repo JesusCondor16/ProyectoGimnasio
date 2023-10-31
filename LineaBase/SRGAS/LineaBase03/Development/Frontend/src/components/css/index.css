@@ -1,0 +1,925 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+ /* Cabecera  */ 
+  .contenedor-header {
+    width: 100%;
+    height: 120px;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px; 
+    display: flex;
+    position: 'absolute';
+}
+
+.titulo {
+    font-size: 24px; 
+    margin-right: 10px; 
+}
+
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+.gimnasio{
+    width: 500px;
+    display: flex;
+    margin-top: 10px; /* Mover hacia abajo */
+    margin-left: 40px; /* Mover hacia la izquierda */
+    margin-bottom: 50px; /* Mover hacia abajo */
+}
+
+/*Pagina Welcome*/
+
+
+
+.btnLogin{
+  width: 500px;
+  display: flex;
+  margin-top: 10px; /* Mover hacia abajo */
+  margin-left: 380px; /* Mover hacia la izquierda */
+  margin-bottom: 50px; /* Mover hacia abajo */
+  color: white;
+}
+
+.btnRegistrarse{
+  width: 500px;
+    display: flex;
+    margin-top: 10px; /* Mover hacia abajo */
+    margin-left: 200px; /* Mover hacia la izquierda */
+    margin-bottom: 50px; /* Mover hacia abajo */
+    color: white;
+}
+/*Login*/
+
+.mt-4{
+  text-transform: uppercase;
+    text-decoration:solid;
+    margin-top: 20px;
+    text-align: center;
+    color: #f14805;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.mb-3{
+  margin-left: 60px;
+}
+
+.titulo-Iniciar{
+  text-transform: uppercase;
+  text-decoration:solid;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.txt-correo-e{
+  
+    text-decoration:solid;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-right:20px;
+}
+
+.txt-contrasenia{
+  text-decoration:solid;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-right:72px;
+}
+/* Signup.css  Registro */
+form label .fa-solid {
+    font-size: 20px;
+    color: #cb232c;
+    margin-right: 10px;
+}
+form label .fa-envelope {
+    font-size: 20px;
+    color: #cb232c;
+    margin-right: 10px;
+}
+form label .fa-user {
+    font-size: 20px;
+    color: #cb232c;
+    margin-right: 10px;
+}
+.custom-signup-title {
+    text-transform: uppercase;
+    text-decoration:solid;
+    margin-top: 20px;
+    text-align: center;
+    color: #f14805;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    
+}
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dc3545; /* Cambia esto al color que desees */
+    height: 100vh;
+  }
+  
+ .signup-form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    text-align: center;
+    padding: 20px 25px;
+    box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7);
+  }
+  
+  
+ .contenedor-1{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+ }
+ .custom-label {
+
+    margin-left: auto; 
+  }
+ .form-control{
+    margin-left: auto;
+ } 
+  .error-message {
+    color: red; 
+  }
+ .custom-buttons {
+    /* Estilos para el contenedor de botones */
+    margin-top: 1rem;
+  }
+  
+  .custom-create-button {
+    /* Estilos para el botón "Crear Cuenta" */
+    width: 100%;
+    border: 10px;
+    background: linear-gradient(to right, #cb232c, #ce1d61);
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .custom-login-button {
+    /* Estilos para el enlace "Login" */
+    width: 100%;
+    border: 10px;
+    background: linear-gradient(to right, #dad1d1, #f0edee);
+    cursor: pointer;
+    color: #1a1818;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+  }  
+
+  /*****PAGINA HOME********/
+
+  /*SECCION DE CARDIO*/
+  .titulo-Cardio{
+    text-transform: uppercase;
+  text-decoration:solid;
+    margin-top: 20px;
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-left:10px;
+  }
+
+/*Estilos Maquina Eliptica*/
+     .img-Eliptica img {
+       max-width: 350px; /* Ancho máximo deseado */
+        height: auto; /* Para mantener la proporción original */
+        margin-left:100px;
+      }
+
+      .titulo-Eliptica{
+        margin-left:200px;
+        font-size:20px;
+        margin-top: 30px;
+      }
+
+/*Estilos Trotadora Curva*/
+     .img-TrotadoraCurva img {
+        max-width: 350px; /* Ancho máximo deseado */
+        height: auto; /* Para mantener la proporción original */
+        margin-left: 650px;
+        margin-top:-420px;
+        height: auto; /* Para mantener la proporción original */
+      }
+
+      .titulo-TrotadoraCurva{
+        margin-left:780px;
+        font-size:20px;
+        margin-top: -53px;
+      }
+
+/*Estilos Trotadora Electrica*/
+    .img-TrotadoraElectrica img {
+       max-width: 350px; /* Ancho máximo deseado */
+       height: auto; /* Para mantener la proporción original */
+       margin-left: 1300px;
+       margin-top:-450px;
+      }
+
+      .titulo-TrotadoraElectrica{
+        margin-left:1380px;
+        font-size:20px;
+        margin-top: -53px;
+      }
+
+/*Trotadora Mini Escaladora*/
+    .img-MiniEscaladora img {
+       max-width: 350px; /* Ancho máximo deseado */
+       height: auto; /* Para mantener la proporción original */
+       margin-left: 2000px;
+       margin-top:-450px;
+      }
+
+      .titulo-MiniEscaladora{
+        margin-left:2100px;
+        font-size:20px;
+        margin-top: -53px;
+      }
+
+/*SECCION DE MAQUINA DE FUERZA*/
+.titulo-MaquinasDeFuerza{
+  text-transform: uppercase;
+text-decoration:solid;
+  margin-top: 150px;
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  margin-left:10px;
+}
+
+/*Mancuerna Hexagonal 5 kg*/
+.img-MancuernaHexagonal5kg img {
+  max-width: 350px; /* Ancho máximo deseado */
+  height: auto; /* Para mantener la proporción original */
+  margin-left:100px;
+}
+
+.titulo-MancuernaHexagonal5kg{
+  
+  font-size:20px;
+  margin-top: 30px;
+  color: black;
+  margin-left:150px;
+  margin-top:-20px;
+}
+
+/*Mancuerna Hexagonal 15 kg*/
+.img-MancuernaHexagonal15kg img {
+  max-width: 350px; /* Ancho máximo deseado */
+  height: auto; /* Para mantener la proporción original */
+  margin-left:660px;
+  margin-top: -410px;
+}
+
+.titulo-MancuernaHexagonal15kg{
+  
+  font-size:20px;
+  margin-top: 30px;
+  color: black;
+  margin-left:700px;
+  margin-top:-55px;
+}
+
+/*Mancuerna Hexagonal 20 kg*/
+.img-MancuernaHexagonal20kg img {
+  max-width: 350px; /* Ancho máximo deseado */
+  height: auto; /* Para mantener la proporción original */
+  margin-left: 1300px;
+  margin-top:-450px;
+}
+
+.titulo-MancuernaHexagonal20kg{
+  
+  margin-left:1380px;
+  font-size:20px;
+  margin-top: -53px;
+}
+
+/*RuedaAbdominales*/
+.img-RuedaAbdominales img {
+  max-width: 350px; /* Ancho máximo deseado */
+       height: auto; /* Para mantener la proporción original */
+       margin-left: 2000px;
+       margin-top:-450px;
+}
+
+.titulo-RuedaAbdominales{
+  
+  margin-left:2100px;
+  font-size:20px;
+  margin-top: -53px;
+}
+
+/*Barra Olimpica*/
+.img-BarraOlimpica img {
+  max-width: 350px; /* Ancho máximo deseado */
+  height: auto; /* Para mantener la proporción original */
+  margin-left:100px;
+  margin-top:200px;
+}
+
+.titulo-BarraOlimpica{
+  
+  font-size:20px;
+  margin-top: 30px;
+  color: black;
+  margin-left:150px;
+  margin-top:-20px;
+}
+
+/*Barra Olimpica Gruesa*/
+.img-BarraOlimpicaGruesa img {
+  max-width: 350px; /* Ancho máximo deseado */
+  height: auto; /* Para mantener la proporción original */
+  margin-left:660px;
+  margin-top: -410px;
+}
+
+.titulo-BarraOlimpicaGruesa{
+  
+  font-size:20px;
+  margin-top: 30px;
+  color: black;
+  margin-left:700px;
+  margin-top:-55px;
+}
+
+/*Barra Olimpica Recta*/
+.img-BarraOlimpicaRecta img {
+  max-width: 350px; /* Ancho máximo deseado */
+  height: auto; /* Para mantener la proporción original */
+  margin-left: 1300px;
+  margin-top:-450px;
+}
+
+.titulo-BarraOlimpicaRecta{
+  
+  margin-left:1380px;
+  font-size:20px;
+  margin-top: -53px;
+}
+
+
+/*Maquina Dominadas*/
+.img-MaquinaDominadas img {
+  max-width: 350px; /* Ancho máximo deseado */
+       height: auto; /* Para mantener la proporción original */
+       margin-left: 2000px;
+       margin-top:-450px;
+}
+
+.titulo-MaquinaDominadas{
+  
+  margin-left:2100px;
+  font-size:20px;
+  margin-top: -53px;
+}
+
+/*Disco Olimpico 5kg*/
+.img-DiscoOlimpico5kg img {
+  max-width: 350px; /* Ancho máximo deseado */
+  height: auto; /* Para mantener la proporción original */
+  margin-left:100px;
+  margin-top:250px;
+}
+
+.titulo-DiscoOlimpico5kg{
+  
+  font-size:20px;
+  margin-top: 30px;
+  color: black;
+  margin-left:200px;
+  margin-top:10px;
+}
+
+/*Disco Olimpico 15kg*/
+.img-DiscoOlimpico15kg img {
+  max-width: 350px; /* Ancho máximo deseado */
+  height: auto; /* Para mantener la proporción original */
+  margin-left:660px;
+  margin-top: -520px;
+}
+
+.titulo-DiscoOlimpico15kg{
+  
+  font-size:20px;
+  margin-top: 30px;
+  color: black;
+  margin-left:730px;
+  margin-top:-80px;
+}
+
+/*Banca Inclinada*/
+.img-BancaInclinada img {
+  max-width: 350px; /* Ancho máximo deseado */
+  height: auto; /* Para mantener la proporción original */
+  margin-left: 1300px;
+  margin-top:-480px;
+}
+
+.titulo-BancaInclinada{
+  
+  margin-left:1400px;
+  font-size:20px;
+  margin-top: -80px;
+}
+
+
+/*Banca Plana*/
+.img-BancaPlana img {
+  max-width: 350px; /* Ancho máximo deseado */
+       height: auto; /* Para mantener la proporción original */
+       margin-left: 2000px;
+       margin-top:-520px;
+}
+
+.titulo-BancaPlana{
+  
+  margin-left:2120px;
+  font-size:20px;
+  margin-top: -80px;
+}
+
+/************FIN PAGINA WELCOME*************/
+/************Detalles de imagen *************/
+/* Estilos para el contenedor principal */
+.image-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  background-color: #f0f0f0; /* Cambia el color de fondo según tus preferencias */
+}
+
+/* Estilos para la sección de detalles de la imagen */
+.image-detail {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 80%; /* Ancho del componente */
+  max-width: 600px; /* Ancho máximo */
+  margin: 20px; /* Márgenes alrededor del componente */
+}
+
+/* Estilos para la imagen */
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la etiqueta "Seleccionar Horario" */
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la lista desplegable */
+.horario-container select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el botón "Reservar" */
+.horario-container button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.horario-container button:hover {
+  background-color: #1e6ea7; /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+
+  /*********** PIE DE PAGINA **************/
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    
+}
+.pie {
+
+    width: 100%;
+    height: 50px;
+    bottom: 0px;
+    align-items: center; 
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px; 
+    display:flex
+   
+
+}
+
+.contactanos {
+    text-align: center; 
+    padding: 5px; 
+    background-color: #333; 
+    margin-left: 450px;
+}
+  
+  .numero {
+    text-align: center;
+    padding: 5px; 
+    background-color: #333; 
+    margin: 10px ; 
+    color: white; 
+    margin-left: 1000px;
+  }
+/***********FIN PIE DE PAGINA **********/
+/***********Perfil de Usuario **********/
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info {
+  width: 55%; /* O el ancho que desees */
+}
+
+.btm {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #183153;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.btm:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #FFD401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.btm:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.btm span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.btm:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/***********FORMULARIO DE PAGO***********/
+.formsTarjeta {
+  position: relative; /* Establece la posición relativa para permitir el posicionamiento absoluto de los elementos internos */
+  top: 30px; /* Mueve el formulario 20px hacia abajo (ajusta según tus necesidades) */
+  left: -1000px; /* Mueve el formulario 20px hacia la derecha (ajusta según tus necesidades) */
+  width: 1000px; /* Ancho ampliado */
+}
+
+.formsTarjeta-group {
+  margin: 40px 0;/* Espacio entre los grupos de campos */
+}
+
+.label {
+  display: block; /* Coloca cada etiqueta en una nueva línea */
+}
+
+input {
+  width: 60%; /* Ocupa todo el ancho disponible */
+  padding: 8px; /* Espacio alrededor del texto */
+  margin-top: 10px; /* Espacio entre los campos */
+}
+
+button {
+  margin-top: 10px; /* Espacio entre el último campo y el botón */
+}
+
+.mensaje-error{
+  color:red;
+  margin-left: 320px;
+  font-size: 25px;
+}
+
+.mensaje-exito{
+  color:green;
+  margin-left: 320px;
+  font-size: 25px;
+}
+
+
+.bloqueBlanco{
+   color: white;
+   height: 700px; /* Cambia el valor a la altura deseada */
+}
+
+.boton-pagar{
+  margin-left:400px;
+  
+}
+/***********FIN FORMULARIO DE PAGO***********/
+
+
+/************PLAN ALIMENTICIO ****************/
+.contenedores {
+  display: flex;
+}
+
+.contenedor {
+  padding: 180px;
+  text-align: center;
+  margin-right: 10px; /* Agrega margen derecho de 10px para separar los contenedores */
+}
+
+.contenedor:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último contenedor */
+}
+
+.contenedor img {
+  max-width: 100%;
+  height: auto;
+  width: 300px;
+  height: 300px;
+}
+
+button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/************ FIN PLAN ALIMENTICIO ***********/
+
+
+
+
+/**********CANJEAR PREMIO********************/
+
+  /**********PREMIO 1*********************/
+  .premio1 {
+    background-color: #f7ca90;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 300px; /* Ajusta la posición vertical (abajo) según tus necesidades */
+    left: 450px; /* Ajusta la posición horizontal (izquierda) según tus necesidades */
+    width: 550px; /* Ajusta el ancho según tus necesidades */
+    text-align: center; /* Centra el contenido horizontalmente */
+  }
+  
+  .premio1 h3 {
+    /* Estilos para el título */
+    margin: 0;
+  }
+  
+  .premio1 img {
+    /* Ajusta el tamaño de la imagen según tus necesidades */
+    width: 250px;
+    height: auto; /* Mantiene la relación de aspecto original */
+  }
+  
+  .premio1 h4 {
+    /* Estilos para el mensaje */
+    margin: 10px 0; /* Espaciado superior e inferior */
+  }
+  
+  .botonCanjearPremio1 {
+    /* Estilos para el botón */
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+/***********PREMIO 2*******************/
+.premio2 {
+  background-color: #f7ca90;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 300px; /* Ajusta la posición vertical (abajo) según tus necesidades */
+  left: 1150px; /* Ajusta la posición horizontal (izquierda) según tus necesidades */
+  width: 550px; /* Ajusta el ancho según tus necesidades */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.premio2 h5 {
+  /* Estilos para el título */
+  margin: 0;
+}
+
+.premio2 img {
+  /* Ajusta el tamaño de la imagen según tus necesidades */
+  width: 250px;
+  height: auto; /* Mantiene la relación de aspecto original */
+}
+
+.premio2 h6 {
+  /* Estilos para el mensaje */
+  margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+.botonCanjearPremio2 {
+  /* Estilos para el botón */
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+/*****************PREMIO 3*********************/
+.premio3 {
+  background-color: #f7ca90;
+  padding: 20px; /* Reducí el relleno para dar más espacio */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 300px;
+  left: 1900px;
+  width: 400px; /* Ajusta el ancho según tus necesidades */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.titulo {
+  font-size: 24px; /* Ajusta el tamaño del título según tus necesidades */
+  margin-top: 0; /* Elimina el margen superior del título */
+}
+
+.imagen-contenedor {
+  padding: 20px; /* Espaciado para la imagen */
+}
+
+.imagen {
+  max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+  height: auto;
+}
+
+/* Estilos para el mensaje de advertencia y el botón */
+/* Puedes ajustar estos estilos según tus necesidades */
+p {
+  font-size: 16px;
+}
+
+.advertencia {
+  font-size: 14px;
+  color: red;
+}
+
+.botonCanjearPremio3 {
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+
+
+/* tituloCanjearPremio.css */
+.tituloCanjearPremio {
+  margin-right: 1000px; /* Mover el título a la izquierda */
+  font-size: 40px;  /* Controlar el tamaño del texto */
+  /* Otros estilos que desees agregar */
+}
+
+/***********FIN CANJEAR PREMIO***************/
+ 
+.bloque {
+  background-color: #fff; /* Color de fondo blanco */
+  padding: 500px; /* Espaciado interno, ajusta según tus necesidades */
+}
+
+.bloque1 {
+  background-color: #fff; /* Color de fondo blanco */
+  padding: 10px; /* Espaciado interno, ajusta según tus necesidades */
+  height: 20px; /* Altura en píxeles, ajusta según tu preferencia */
+}
+
+/*Productos reservados*/
+.productos-reservados {
+  position:center;
+}
+
+
