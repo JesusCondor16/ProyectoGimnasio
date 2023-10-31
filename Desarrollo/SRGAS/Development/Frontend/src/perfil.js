@@ -88,6 +88,7 @@ function Perfil() {
                             </ul>
                         </div>
                     )}
+                    <div className="bloque"></div>
                 </div>
             </div>
             <Pie />
